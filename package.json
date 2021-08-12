@@ -1,0 +1,23 @@
+{
+  "name": "fury-static-site-template",
+  "version": "1.0.0",
+  "description": "a miley cyrus fan site.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flamedfury/miley.flamedfury.com.git"
+  },
+  "author": "fLaMEd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flamedfury/miley.flamedfury.com/issues"
+  },
+  "homepage": "https://github.com/flamedfury/miley.flamedfury.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}

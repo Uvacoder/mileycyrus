@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>{{ title }} :: nothing breaks like a heart</title>
+
+	<link rel="shortcut icon" href="img/favicon.png" />
+	<link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="{{ body_class }}">
+
+	<nav>
+		{% include "./_partials/_nav.njk" %}
+	</nav>
+
+	<header>
+		{% include "./_partials/_header.njk" %}
+	</header>
+
+	<main>
+		{% block content %}
+		{% endblock %}
+	</main>
+
+	<footer>
+		{% include "./_partials/_footer.njk" %}
+	</footer>
+
+</body>
+</html>

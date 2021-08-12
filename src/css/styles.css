@@ -1,0 +1,210 @@
+/* fury base css */
+/* by fLaMEd <flamedfury.com> */
+
+/* global */
+:root {
+  /* typography */
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: "Open Sans", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  /* body font size set to 16px as 'root em' */
+  --base-fontsize: 1rem;
+
+  /* minor third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.5;
+
+  /* Line height is set to the "golden ratio" for optimal legibility */
+  --line-height: 1.618;
+
+  /* colours */
+  --bg: #291a2e;
+  --bg-accent: #171321;
+  --text: #bfbfbf;
+  --text-light: #f3f3f3;
+  --border: #666;
+  --accent: #954252;
+  --accent-light: #e2b15d;
+  --code: #f06292;
+  --preformatted: #ccc;
+  --disabled: #111;
+}
+
+/* make sure we look good on small screens */
+@media screen and (max-width: 100%) {
+  header,
+  main,
+  footer {
+    width: 996px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav ul li {
+    float: none;
+  }
+}
+
+/* main body formatting */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: var(--base-fontsize);
+  line-height: var(--line-height);
+}
+
+header,
+main,
+footer {
+  float: center;
+  width: 100%;
+  max-width: 996px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+main {
+  background-color: var(--bg-accent);
+  padding: 2rem;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 6em;
+  padding: 2em;
+  text-align: center;
+}
+
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sans);
+}
+
+footer p {
+  color: var(--text-light);
+  font-size: 0.75em;
+}
+
+strong {
+  color: var(--accent-light);
+}
+
+/*
+    elements
+*/
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus a:active {
+  text-decoration: underline;
+}
+
+blockquote {
+  margin-left: 2em;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.4rem 0.8rem;
+  border-left: 0.35rem solid var(--accent);
+  color: var(--text);
+  font-style: italic;
+}
+
+cite {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+/* a better looking default horizontal rule */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+    images
+*/
+
+/* scales the header image as window is resized */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header-image {
+  max-width: 100%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  height: auto;
+}
+
+/*
+    navigation
+*/
+nav {
+  font-family: var(--sans);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+nav ul {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 52;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  color: var(--accent);
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* sets active link on active page */
+body.home .nav-home a,
+body.miley .nav-miley a,
+body.media .nav-media a,
+body.gallery .nav-gallery a,
+body.online .nav-online a,
+body.about .nav-about a {
+  color: var(--accent-light);
+}
