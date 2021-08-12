@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
 
 			// set our prefered input and output directories
 			input: "src",
-			output: "_site",
+			output: "public",
 		}
 	};
 };
